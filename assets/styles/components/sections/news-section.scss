@@ -1,0 +1,176 @@
+.news-section {
+
+    &__list {
+        display: grid;
+        grid-column-gap: 18px;
+        row-gap: 36px;
+        grid-template-columns: repeat(4, calc((100% - 54px) / 4));
+        grid-template-rows: minmax(min-content, auto) minmax(min-content, auto);
+
+        .news {
+
+            &:first-child {
+                display: flex;
+                align-items: center;
+                column-gap: 20px;
+                grid-column: 1 / -1;
+
+                .image {
+                    max-width: 460px;
+                    max-height: 400px;
+                    height: auto;
+
+                    img {
+                        position: unset;
+                        top: unset;
+                        left: unset;
+                        transform: unset;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .news-content {
+                    margin-top: 0;
+                    max-width: 50%;
+
+                    .title {
+                        margin-top: 24px;
+                        font-size: 28px;
+                        font-weight: 600;
+                        line-height: 38px;
+                    }
+
+                    .description {
+                        font-size: 20px;
+                        margin-top: 16px;
+                        line-height: 28px;
+                        height: auto;
+                        max-height: 150px;
+                    }
+                }
+            }
+
+            .image {
+                position: relative;
+                max-width: 100%;
+                max-height: 200px;
+                height: fit-content;
+                width: 100%;
+                border-radius: 12px;
+                overflow: hidden;
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .news-content {
+                margin-top: 20px;
+                color: #131313;
+
+                .category {
+                    font-size: 15px;
+                    font-weight: 400;
+                }
+
+                .title {
+                    font-weight: 600;
+                    margin-top: 16px;
+                }
+
+                .description {
+                    margin-top: 16px;
+                    height: 70px;
+                    max-height: 70px;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+
+                    & > *:not(p) {
+                        display: none;
+                    }
+
+                    p br {
+                        display: none;
+                    }
+                }
+
+                .data {
+                    font-size: 15px;
+                    color: #656565;
+                    margin-top: 16px;
+                }
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            grid-template-columns: repeat(2, calc((100% - 18px) / 2));
+            grid-template-rows: 360px 435px 435px;
+            .news {
+
+                &:first-child {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 10px;
+                    grid-column: 1 / -1;
+
+                    .image {
+                    }
+
+                    .news-content {
+                    }
+                }
+            }
+
+            @media only screen and (max-width: 668px) {
+                display: block;
+
+                .news {
+                    align-items: center;
+
+                    &:first-child {
+                        display: block;
+
+                        .image {
+                            max-width: none;
+                        }
+
+                        .news-content {
+                            margin-top: 10px;
+                            max-width: 100%;
+
+                            .category {
+                                font-size: 12px;
+                            }
+
+                            .title {
+                                margin: 0;
+                                font-size: 20px;
+                            }
+
+                            .description {
+                                margin: 0;
+                                font-size: 15px;
+                            }
+
+                            .data {
+                                margin: 0;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+
+                    &:not(&:first-child) {
+                        display: none;
+                    }
+
+                }
+            }
+        }
+    }
+}
