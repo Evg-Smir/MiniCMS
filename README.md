@@ -1,32 +1,37 @@
-# Diplom project
+<h1 align="center">Представляю Вашему вниманию MiniCMS</h1>
 
-## Setup
+<h3 align="center">Проект все еще находится в процессе разработки и не является завершенной версией</h2>
 
-Make sure to install the dependencies:
 
+<h3>Перед началом установите зависимости</h3>
 ```bash
 # yarn
 yarn install
 
 # npm
 npm install
-
-# pnpm
-pnpm install
 ```
 
-## Development Server
+<h3>Запустите сервер разработки</h3>
 
-Start the development server on http://localhost:3000
+http://localhost:3000
 
 ```bash
 npm run dev
 ```
 
-## Production
+<h3>Вход в административную панель</h3>
 
-Build the application for production:
+Для входа в административную панель нужно прописать в адресную строку /admin
 
-```bash
-npm run build
+Логин:
 ```
+admin@admin.ru
+```
+
+
+Пароль:
+```
+adminadmin123
+```
+
